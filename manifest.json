@@ -3,7 +3,11 @@
   "name": "Twitter illustration save in Google Drive",
   "version": "1.0.0",
   "description": "Twitterのイラストを特定のGoogleドライブに保存する拡張機能",
+  "permissions": ["contextMenus", "activeTab"],
   "host_permissions": ["https://x.com/*", "https://drive.google.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
       "matches": ["https://x.com/home", "https://x.com/*/status/*"],
@@ -11,11 +15,5 @@
       "css": ["styles.css"],
       "run_at": "document_end"
     }
-  ],
-  "icons": {
-    "16": "icon-16.png",
-    "32": "icon-32.png",
-    "48": "icon-48.png",
-    "128": "icon-128.png"
-  }
+  ]
 }

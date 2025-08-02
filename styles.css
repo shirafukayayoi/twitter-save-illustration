@@ -1,0 +1,41 @@
+/* styles.css - Twitter画像保存拡張機能のスタイル */
+
+/* 通知スタイルの追加設定 */
+.twitter-save-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  padding: 12px 20px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.twitter-save-notification.success {
+  background-color: #4caf50;
+}
+
+.twitter-save-notification.error {
+  background-color: #f44336;
+}
+
+.twitter-save-notification.info {
+  background-color: #2196f3;
+}
+
+/* ホバー効果 */
+img:hover {
+  cursor: pointer;
+}
+
+/* Twitter画像に特化したスタイル */
+[data-testid="tweetPhoto"] img:hover,
+[data-testid="card.layoutLarge.media"] img:hover {
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
