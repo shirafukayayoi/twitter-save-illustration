@@ -3,7 +3,7 @@
   "name": "Twitter illustration save in Google Drive",
   "version": "1.0.0",
   "description": "Twitterのイラストを特定のGoogleドライブに保存する拡張機能",
-  "host_permissions": ["https://bookwalker.jp/*"],
+  "host_permissions": ["https://x.com/*", "https://drive.google.com/*"],
   "content_scripts": [
     {
       "matches": ["https://x.com/home", "https://x.com/*/status/*"],
